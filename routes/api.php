@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\respuestaController;
 use App\Http\Controllers\PaisController;
+use App\Http\Controllers\AutorController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,6 +27,8 @@ use App\Http\Controllers\PaisController;
 Route::get("/ejecutar",[respuestaController::class,"index"]);
 
 Route::post("/nuevo",[PaisController::class,"crearPais"]);
+
+Route::get("/autores",[AutorController::class,"obtenerAutores"]);
 
 Route::get("/obtener", [PaisController::class,"obtener"]);
 
